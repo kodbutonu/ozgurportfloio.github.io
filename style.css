@@ -1,0 +1,828 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+  
+}
+body{
+    background-color: white !;
+}
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    z-index: 111;
+   
+}
+.logo{
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    color: #3d535f;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+b{
+    font-size: 70px;
+    color: #7f00ff;
+}
+.navItems{
+    display: flex;
+
+}
+.navItems li{
+    list-style: none;
+    margin: 0 15px;
+       margin-top: 20px;
+}
+.navItems li a{
+ 
+    font-size: 25px;
+    color: #3d535f;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.navItems li:hover a{
+color: #7f00ff;
+}
+.cursor {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white; /* İmleç rengini yuvarlak beyaz yapın */
+    pointer-events: none; /* İmleç üzerinden geçerken diğer objelerin etkilenmemesini sağlayın */
+    position: fixed; /* İmleç elementini sabit konumda tutun */
+    z-index: 9999; /* En üstte gözükmesini sağlayın */
+    transform: translate(-50%, -50%);
+    transition: background-color 0.1s ease-out; /* Renk değişimini yumuşaklaştırın */
+}
+
+.links{
+     margin-top: 20px;
+}
+#paint{
+    margin-top: 200px;
+    height: 500px;
+}
+.links a{
+    
+    font-size: 30px;
+    color: #3d535f;
+    margin: 25px 10px;
+}
+.wrapper{
+     background-image: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff);
+    display: flex;
+    width: 100%;
+    height: calc(100vh-80px);
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+    background-size: 400% 400%;
+    animation: renk-gecis 5s ease infinite;
+}
+ @keyframes renk-gecis {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+.wrapper::before{
+    position: absolute;
+    content: '';
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    left:-12%;
+    top: 40%;
+    background: linear-gradient(45deg,#0b15d1,rgb(13, 228, 244));
+    animation: object1 6s linear infinite;
+}
+.wrapper::after{
+    position: absolute;
+    content: '';
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    left:35%;
+    top: 12%;
+    background: linear-gradient(45deg,#0b15d1,rgb(13, 228, 244));
+    animation: object2 6s linear infinite;
+}
+@keyframes object1 {
+    50%{
+        left:-13%;
+        top:41%;
+
+    }
+}
+@keyframes object2 {
+    50%{
+        left:35%;
+        top:10%;
+        
+    }
+}
+@keyframes object3{
+    50%{
+        left:80%;
+        top:90%;
+        
+    }
+}
+@keyframes object4{
+    50%{
+        left:10%;
+        top:190%;
+        
+    }
+}
+.services-design::before{
+    border-radius: 50%;
+    left:94%;
+    top: 122%;
+       background: linear-gradient(45deg,#0b15d1,rgb(13, 228, 244));
+     height: 250px;
+    width: 280px;
+    content: '';
+     position: absolute;
+      animation: object3 6s linear infinite;
+      
+}
+.services-design::after{
+    border-radius: 50%;
+    left:15%;
+    top: 192%;
+       background: linear-gradient(45deg,#0b15d1,rgb(13, 228, 244));
+     height: 100px;
+    width: 130px;
+    content: '';
+     position: absolute;
+      animation: object4 6s linear infinite;
+      
+}
+.cols{
+    width: 50%;
+}
+.cols0{
+    width: 60%;
+    z-index: 5;
+}
+.topLine{
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: #3d535f;
+}
+.topLine::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: #4000ff;
+}
+h1{
+    display: block;
+    font-size: 6em;
+    font-weight: 700;
+    color: #3d535f;
+}
+.multiText{
+    color: #5100ff;
+    text-transform: capitalize;
+}
+p{
+    display: block;
+    width: 90%;
+    font-size: 1.2em;
+    color: #3d535f;
+}
+.btns{
+    width: 100%;
+    position: relative;
+    left: 150px;
+}
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400px;
+    color: #ffffff;
+    background-color: #3d535f;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0, 0, 0,0.4);
+}
+.imgbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.imgbox img{
+    position: relative;
+    height: 100%;
+    width: calc(130% - 80px);
+    top: -100px;
+    right: 50px;
+ 
+    animation: animateUser 4s linear infinite;
+}
+@keyframes animateUser {
+    50%{
+        right:30px;
+        top: -90px;
+    }
+}
+.imgbox #splash{
+    position: absolute;
+    top:50%;
+    left:50px;
+    transform: translate(-50%-50%) rotate(-25deg);
+    width: 160%;
+    filter: saturate(200%);
+    animation: animate 4s linear infinite;
+    margin-right: 50px;
+}
+@keyframes animate {
+    50%{
+        right: 100px;
+        top: 40px;
+        width: 155%;
+    }
+    
+}
+body {
+    font-family: "poppins", sans-serif;
+    text-align: center;
+ 
+}
+h2{
+    margin-bottom: 20px;
+    font-size: 34px;
+}
+
+.skill {
+    width: 300px;
+    margin: 20px auto;
+
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.bar {
+    height: 20px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    width: 0;
+}
+
+span {
+    font-weight: bold;
+    color: #333;
+}
+/* Styles for the section */
+section {
+    width: 100%;
+    height: 50%;
+  background-color: #ffffff;
+  padding: 50px 0;
+}
+
+/* Styles for the main-text element */
+.main-text {
+  display: block;
+  font-size: 35px;
+  font-weight: bold;
+  color: #3d535f;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+/* Styles for the section-services element */
+.section-services {
+    background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Styles for the services-box element in the section */
+.services-box {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(44, 121, 236, 0.934);
+}
+
+/* Styles for the box-icon elements in the services-box */
+.services-box box-icon {
+  font-size: 50px;
+  color: #3d535f;
+  margin-bottom: 20px;
+}
+.services-design{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+}
+.services-box img{
+    height: 50px;
+    width: 50px;
+}
+.services-box p{
+     margin: 10px 0;
+    padding: 20px;
+    line-height: 1.6;
+    color: #3d535f;
+    text-align: justify;
+     font-size: 1.2em;
+}
+/* ... Diğer CSS stil tanımları ... */
+
+/* Stil tanımları "button" sınıfı için */
+
+
+.btnn {
+    align-items: center;
+  width: 200px;
+  font-size: 20px;
+  height: 60px;
+  border: none;
+  outline: none;
+  background: #b5b5b5;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.btnn::before {
+  position: absolute;
+  content: "";
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(
+    124deg,
+    #ff2400,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8,
+    #dd00f3,
+    #dd00f3
+  );
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  animation: move 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.btnn:hover::before {
+  opacity: 1;
+}
+
+.btnn::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #555273;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.par{
+    height: 130px;
+    width: 100%;
+}
+
+.skills{
+    background-color: #ffffff;
+}
+
+.skill-main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+
+}
+.skill-bar{
+    margin-bottom: 2.3rem;
+}
+.skill-left{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.skill-left .skill-bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.skill-left .skill-bar .bar{
+    width: 100%;
+    height: 10px;
+    background-color: #737373;
+    border-radius: 25px;
+    margin-top: 10px;
+    position: relative;
+}
+.skill-bar .bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: #00ffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #0051ff;
+}
+.skil{
+    display: flex;
+    flex-direction: column;
+    margin-top: 300px;
+    background-color: white;
+}
+
+/* HTML için animasyon */
+@keyframes html {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 92%;
+  }
+}
+
+/* JavaScript için animasyon (Bu örnekte animasyon kullanmıyoruz, sadece genişlik belirtiyoruz) */
+@keyframes js {
+  /* Animasyon kullanmıyoruz, sadece genişlik belirliyoruz */
+  from {
+    width: 0%;
+  }
+  to {
+    width: 82%;
+  }
+}
+
+/* Flutter için animasyon (Bu örnekte animasyon kullanmıyoruz, sadece genişlik belirtiyoruz) */
+@keyframes flutter {
+  /* Animasyon kullanmıyoruz, sadece genişlik belirliyoruz */
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+/* React Native için animasyon (Bu örnekte animasyon kullanmıyoruz, sadece genişlik belirtiyoruz) */
+@keyframes react-native {
+  /* Animasyon kullanmıyoruz, sadece genişlik belirliyoruz */
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+/* React için animasyon (Bu örnekte animasyon kullanmıyoruz, sadece genişlik belirtiyoruz) */
+@keyframes react {
+  /* Animasyon kullanmıyoruz, sadece genişlik belirliyoruz */
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+/* CSS için animasyon */
+@keyframes css {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+/* Her bir beceri çubuğu için genişlik ve animasyon belirleyelim */
+.skill-bar .bar .html {
+  width: 92%;
+  animation: html 2s;
+}
+
+.skill-bar .bar .js {
+  width: 82%;
+   animation: js 2s;
+}
+
+.skill-bar .bar .flutter {
+  width: 80%;
+   animation: flutter 2s;
+}
+
+.skill-bar .bar .react-native {
+  width: 74%;
+   animation: react-native 2s;
+}
+
+.skill-bar .bar .react {
+  width: 70%;
+   animation: react 2s;
+}
+
+.skill-bar .bar .css {
+  width: 90%;
+   animation: css 2s;
+}
+
+/* Skill right*/
+
+/* Ana grid yapısını oluşturun */
+.professional {
+    display: flex;
+   flex-wrap: wrap;
+   
+}
+
+
+
+ .card
+{
+    flex-direction: column;
+    width:100%;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+ .card:hover
+{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(83, 83, 83, 0.5);
+}
+.card::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.03);
+    pointer-events: none;
+    z-index: 1;
+}
+.percent
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px #000;
+    background: #222;
+    z-index: 1000;
+}
+.percent .number
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.percent .number h2
+{
+    color: #777;
+    font-weight: 700;
+    font-size: 40px;
+    transition: 0.5s;
+}
+.card:hover .percent .number h2
+{
+    color: #fff;
+    font-size: 60px;
+}
+.percent .number h2 span
+{
+    font-size: 24px;
+    color: #777;
+}
+.card:hover .percent .number h2 span
+{
+    color: #fff;
+}
+.text
+{
+    position: relative;
+    color: #777;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.box{
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover .text
+{
+    color: #fff;
+}
+svg
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 1000;
+}
+svg circle
+{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #191919;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px,5px);
+}
+svg circle:nth-child(2)
+{
+   stroke-dasharray: 440;
+   stroke-dashoffset: 440; 
+}
+.card:nth-child(1) svg circle:nth-child(2)
+{
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: #00ffea;
+}
+.card:nth-child(2) svg circle:nth-child(2)
+{
+    stroke-dashoffset: calc(440 - (440 * 85) / 100);
+    stroke: #f07dff;
+}
+.card:nth-child(3) svg circle:nth-child(2)
+{
+    stroke-dashoffset: calc(440 - (440 * 35) / 100);
+    stroke: #ff04f7;
+}
+.text {
+    text-align: center;
+    color: rgb(23, 105, 219);
+    font-size: 2.1rem;
+    /* Neon metin gölgesi */
+}
+.containe {
+    margin-top: 30px;
+    display: flex;
+    flex-direction:row;
+    
+}
+h3{
+    font-size: 1.6rem;
+}
+/* Tablet ve telefon boyutları için stiller */
+@media screen and (max-width: 1024px) {
+  #paint{
+    margin-bottom: 150px;
+    align-items: center;
+    margin-left: 200px;
+  }
+  .wrapper {
+    flex-direction: row;
+    text-align: center;
+    display: flex;
+  }
+
+  .cols0 {
+    width: 70%;
+  }
+    .cols1 {
+    width: 30%;
+  }
+  .imgbox {
+    width: 50%;
+    margin-top: 50px;
+  }
+
+  .imgbox img {
+    width: 260px;
+    height: 260px;
+    margin: 0 auto;
+    display: block;
+    margin-left: 150px;
+  }
+
+  .cols0 {
+  
+    width: 50%;
+    padding: 0 20px;
+  }
+
+  .wrapper::before {
+  margin-top: 100px;
+  }
+
+  .wrapper::after {
+    margin-top: 100px;
+  }
+
+  .services-design::before {
+  margin-top: 300px;
+  }
+
+  .services-design::after {
+    margin-top: 600px;
+  }
+
+  .cols1 {
+  width: 50%;
+  }
+
+  .main-text {
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 3.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .btnn {
+    font-size: 18px;
+  }
+
+  .professional {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .containe {
+    flex-direction: column;
+  }
+}
