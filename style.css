@@ -613,6 +613,16 @@ section {
     transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(83, 83, 83, 0.5);
 }
+.skill-main{
+  display: flex;
+  flex-direction: column;
+}
+.skill-left{
+  width: 100%;
+}
+.skill-right{
+  width: 70%;
+}
 .card::before
 {
     content: '';
@@ -744,6 +754,25 @@ h3{
 }
 /* Tablet ve telefon boyutları için stiller */
 @media screen and (max-width: 1024px) {
+  .skil{
+    margin-top: 800px;
+    display: flex;
+    flex-direction: column;
+  }
+  .skills{
+    display: flex;
+    flex-direction: column;
+    height: 2000px;
+  }
+  .skill-left .skill-bar .bar {
+    width: 70%;
+  }
+  .skill-left{
+    margin: 0;
+  }
+  .info p{
+    width:0px;
+  }
   #paint{
     margin-bottom: 150px;
     align-items: center;
@@ -810,6 +839,7 @@ h3{
 
   p {
     font-size: 1em;
+    width: 300px;
   }
 
   .btnn {
@@ -825,4 +855,50 @@ h3{
   .containe {
     flex-direction: column;
   }
+   nav{
+    text-align: center;
+    padding: 2.2rem;
+    width: 100% !important;
+  }
+ .navItems{
+    display: flex;
+    
+}
+.navItems li{
+    list-style: none;
+    margin: 0 15px;
+}
+.navItems li a{
+ 
+    font-size:5px;
+    color: #3d535f;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.logo{
+    display: flex;
+    font-size: 10px;
+    font-weight: 800;
+    color: #3d535f;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-left: 40px;
+    margin-bottom: 50px;
+}
+.links{
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  width: 20px;
+}
+.links a i{
+  font-size: 10px;
+}
+.section-services {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  margin-bottom: 300px;
+}
 }
