@@ -124,6 +124,9 @@ color: #7f00ff;
     background: linear-gradient(45deg,#0b15d1,rgb(13, 228, 244));
     animation: object2 6s linear infinite;
 }
+.skill-left h2{
+  margin-right: 177px;
+}
 @keyframes object1 {
     50%{
         left:-13%;
