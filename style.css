@@ -623,8 +623,14 @@ section {
 .skill-left{
   width: 100%;
 }
-.skill-right{
-  width: 70%;
+.skill-right {
+    margin-left: 84px;
+    width: 100%;
+}
+.skill-right h2{
+margin-right: 112px;
+    margin-bottom: 20px;
+    font-size: 34px;
 }
 .card::before
 {
